@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willy Wonka |admin</title>
+    <link rel="icon" type="image/png" href="./logo1.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <script type="text/javascript" src="funcionesadmin.js"></script>
+    <link rel="stylesheet" href="./estilosadmin.css">
+    <script src="https://kit.fontawesome.com/fa135ba54a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <img id="header_logo" src="./logo1.png" />
+        <div class="namecompany">
+            <h1>Willy Wonka</h1>
+        </div>
+        <a href="index.html">
+            <div class="salida">
+                <span><i class="fas fa-sign-out-alt"></i></span>
+            </div>
+        </a>
+    </header>
+    <div class="panel">
+        <div class="lateral">
+            <ul>
+                <li >
+                    <a href="#" onclick="mostrartablausuarios()">
+                        <span class="iconolateral"><i class="fas fa-users"></i>
+
+                        </span>
+                        <span class="labellateral">Usuarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="traerInformacionProductos()">
+                        <span class="iconolateral"><i class="far fa-list-alt"></i></span>
+                        <span class="labellateral">Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="iconolateral"><i class="fas fa-cog"></i>
+                            <img src="" alt="">
+                        </span>
+                        <span class="labellateral">Configuración</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="seccion">
+            <div class="tabla">
+            <table>
+                
+                <tbody id ="miResultadomensajes1"></tbody>
+                <tbody id ="miResultadomensajes"></tbody>
+            </table>
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="overlay" id="overlay">
+        <div class="popup_user" id="popup_user">
+            <a href="#" id="btn_cerrar_popup" class="btn_cerrar_popup" onclick="cancelarPopup()"><i class="fas fa-times"></i></a>
+            <h1>Nuevo Usuario</h1>
+
+            <form action="">
+                <div class="contenedor-inputs">
+                    <div class="grupo">
+                        <input type="number" name="id" id="id" required><span class="barra"></span>
+                        <label for="">Id</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="name" id="name" required><span class="barra"></span>
+                        <label for="">Nombre</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="identification" id="identification" required><span class="barra"></span>
+                        <label for="">Identificación</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="address" id="address" required><span class="barra"></span>
+                        <label for="">Dirección</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="cellPhone" id="cellPhone" required><span class="barra"></span>
+                        <label for="">Celular</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="email" name="email" id="email" required><span class="barra"></span>
+                        <label for="">E-mail</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="password" name="clave" id="clave" required><span class="barra"></span>
+                        <label for="">Contraseña</label>
+                    </div>
+
+                    <div class="grupo">
+                        <input type="text" name="zone" id="zone" required><span class="barra"></span>
+                        <label for="">Zona</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="type" id="type" required><span class="barra"></span>
+                        <label for="">Tipo</label>
+                    </div>
+                </div>
+                <div class="botonesform">
+                <a href="#" class="guardar_popup" onclick="validarusuario()">Guardar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="overlay2" id="overlay2">
+        <div class="popup_user2" id="popup_user2">
+            <a href="#" id="btn_cerrar_popup" class="btn_cerrar_popup" onclick="cancelarPopup2()"><i class="fas fa-times"></i></a>
+            <h1>Editar Usuario</h1>
+
+            <form action="">
+                <div class="contenedor-inputs">
+                    <div class="grupo">
+                        <input type="number" name="id2" id="id2" required><span class="barra"></span>
+                        <label for="">Id</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="name2" id="name2" required><span class="barra"></span>
+                        <label for="">Nombre</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="identification2" id="identification2" required><span class="barra"></span>
+                        <label for="">Identificación</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="address2" id="address2" required><span class="barra"></span>
+                        <label for="">Dirección</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="cellPhone2" id="cellPhone2" required><span class="barra"></span>
+                        <label for="">Celular</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="email" name="email2" id="email2" required><span class="barra"></span>
+                        <label for="">E-mail</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="password" name="clave2" id="clave2" required><span class="barra"></span>
+                        <label for="">Contraseña</label>
+                    </div>
+
+                    <div class="grupo">
+                        <input type="text" name="zone2" id="zone2" required><span class="barra"></span>
+                        <label for="">Zona</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="type2" id="type2" required><span class="barra"></span>
+                        <label for="">Tipo</label>
+                    </div>
+                </div>
+                <div class="botonesform">
+                <a href="" class="guardar_popup" onclick="actualizarusuario()">Actualizar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="overlayprod" id="overlayprod">
+        <div class="popup_prod" id="popup_prod">
+            <a href="#" id="btn_cerrar_popup_prod" class="btn_cerrar_popup_prod" onclick="cancelarPopupProd()"><i class="fas fa-times"></i></a>
+            <h1>Nuevo Producto</h1>
+            <form action="">
+                <div class="contenedor-inputs">
+                    <div class="grupo">
+                        <input type="text" name="reference" id="reference" required><span class="barra"></span>
+                        <label for="">Referencia</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="category" id="category" required><span class="barra"></span>
+                        <label for="">Categoría</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="description" id="description" required><span class="barra"></span>
+                        <label for="">Descripción</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="availability" id="availability" required><span class="barra"></span>
+                        <label for="">Disponibilidad</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="number" name="price" id="price" required><span class="barra"></span>
+                        <label for="">Precio</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="number" name="quantity" id="quantity" required><span class="barra"></span>
+                        <label for="">Cantidad</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="photography" id="photography" required><span class="barra"></span>
+                        <label for="">Fotografia</label>
+                    </div>
+
+                </div>
+                <div class="botonesform">
+                    <a href="#" class="guardar_popup" onclick="validarproducto()">Guardar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="overlayprod2" id="overlayprod2">
+        <div class="popup_prod2" id="popup_prod2">
+            <a href="#" id="btn_cerrar_popup_prod" class="btn_cerrar_popup_prod" onclick="cancelarPopupProd2()"><i class="fas fa-times"></i></a>
+            <h1>Editar Producto</h1>
+            <form action="">
+                <div class="contenedor-inputs">
+                    <div class="grupo">
+                        <input type="text" name="reference2" id="reference2" required><span class="barra"></span>
+                        <label for="">Referencia</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="category2" id="category2" required><span class="barra"></span>
+                        <label for="">Categoría</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="description2" id="description2" required><span class="barra"></span>
+                        <label for="">Descripción</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="availability2" id="availability2" required><span class="barra"></span>
+                        <label for="">Disponibilidad</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="number" name="price2" id="price2" required><span class="barra"></span>
+                        <label for="">Precio</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="number" name="quantity2" id="quantity2" required><span class="barra"></span>
+                        <label for="">Cantidad</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="photography2" id="photography2" required><span class="barra"></span>
+                        <label for="">Fotografia</label>
+                    </div>
+
+                </div>
+                <div class="botonesform">
+                <a href=""class="guardar_popup" onclick="actualizarproducto()">Actualizar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

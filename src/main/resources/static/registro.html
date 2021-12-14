@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willy Wonka | Registro</title>    
+    <link rel="icon" type="image/png" href="./logo1.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <script type="text/javascript" src="funcionesregistro.js"></script>
+    <link rel="stylesheet" href="./estilos.css">
+    
+</head>
+
+<body>
+    <header>
+        <img id="header_logo" src="./logo1.png"/>
+    <div class="namecompany">
+        <h1>Willy Wonka</h1>
+
+    </div>
+</header>
+<div>
+    <h2>Fábrica de Chocolates</h2>        
+</div>
+    <div class="body2">
+
+        <div class="forma">
+            <h2>Registro Usuario</h2>
+
+            <div class="grupo">
+                <input type="text" name="name" id="name" required><span class="barra"></span>
+                <label for="">Nombre</label>
+            </div>
+
+            <div class="grupo">
+                <input type="email" name="email" id="email" required><span class="barra"></span>
+                <label for="">E-mail</label>
+            </div>
+            <div class="grupo">
+                <input type="password" name="clave" id="clave" required><span class="barra"></span>
+                <label for="">Contraseña</label>
+            </div>
+            <div class="grupo">
+                <input type="password" name="clave2" id="clave2" required><span class="barra"></span>
+                <label for="">Confirmar Contraseña</label>
+            </div>
+
+            <button class="button1" onclick="validar()">Crear Cuenta</button>
+
+            <p class="no-access "> ¿Ya tienes una cuenta? <a href="index.html">Inicia Sesión</a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

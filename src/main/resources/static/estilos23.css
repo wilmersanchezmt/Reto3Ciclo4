@@ -1,0 +1,182 @@
+:root {
+    --colorTextos: rgba(88, 48, 2);
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(./WillyWonka.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 500px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.namecompany {
+    display: block;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px 0 0 0;
+}
+
+.namecompany h1 {
+    font-family: Tangerine;
+    text-align: center;
+    font-weight: 50;
+    font-size: 150px;
+    color: #fe8c00;
+
+}
+
+.namecompany h2 {
+    text-align: center;
+    font-weight: 60;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--colorTextos)
+}
+
+.namecompany2 {
+    display: block;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px 0 0 0;
+}
+
+.namecompany2 h1 {
+    font-family: Tangerine;
+    text-align: center;
+    font-weight: 50;
+    font-size: 80px;
+    color: #fe8c00;
+
+}
+
+.body2 {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 60;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--colorTextos)
+}
+
+forma {
+    display: flex;
+    background: white;
+    padding: 20px 10px;
+    box-shadow: 0 0 60px rgba(88, 48, 2);
+    border-radius: 10px;
+}
+
+.forma {
+    width: 100%;
+    margin: auto;
+}
+
+forma .grupo {
+    position: relative;
+    margin: 45px;
+
+}
+
+input {
+    background: none;
+    color: #cc0101;
+    font-size: 20px;
+    padding: 1px 6px 1px 2px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid var(--colorTextos);
+}
+
+input:focus {
+    outline: none;
+    color: rgb(218, 100, 4);
+}
+
+label {
+    color: #1efe00 ;
+    font-size: 18px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    transition: 0.4s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: rgb(218, 4, 57);
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: rgb(218, 100, 4);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+button {
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    width: 40%;
+    border-color: rgb(218, 100, 4);
+    margin: 5px auto;
+    background-color: rgb(218, 100, 4);
+    box-shadow: 0 0 10px rgb(218, 100, 4);
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+.pieformulario{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+.namecompany{    
+    background-color:  rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+}

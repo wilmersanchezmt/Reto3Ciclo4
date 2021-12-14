@@ -1,0 +1,646 @@
+:root {}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Logo Header*/
+header {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    align-items: top;
+    background-color: #ffffff;
+}
+
+#header_logo {
+    width: 10%;
+    height: 100%;
+}
+
+header a .salida {
+    position: absolute;
+    right: 0%;
+    padding: 5px;
+    font-size: 50px;
+    color: #fe8c00;
+}
+
+/*Titulo Headere Willi Wonka*/
+
+.namecompany h1 {
+    font-family: Tangerine;
+    text-align: center;
+    font-weight: 50;
+    font-size: 60px;
+    color: #fe8c00;
+
+}
+
+/*Barra lateral*/
+
+.lateral {
+    position: fixed;
+    width: 4%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    overflow: hidden;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.lateral:hover {
+    width: 17%;
+}
+
+.lateral ul {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.lateral ul li {
+    width: 100%;
+    list-style: none;
+}
+
+.lateral ul li a .iconolateral {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    min-width: 5rem;
+    font-size: 200%;
+}
+
+.iconolateral {
+    color: #fe8c00;
+}
+
+.labellateral {
+    display: flex;
+    height: 1rem;
+    padding: 10px 10px 10px 0;
+    font-size: 150%;
+}
+
+.labellateral {
+    color: #fe8c00;
+}
+
+li:hover {
+    background-color: #fe8c00;
+    align-items: center;
+    border-radius: 10px;
+}
+
+li:hover a .iconolateral {
+    color: #ffffff;
+
+}
+
+li:hover a .labellateral {
+    color: #ffffff;
+
+}
+
+.lateral ul li a {
+    display: flex;
+    text-decoration: none;
+}
+
+/*Imagen de fondo */
+body {
+    min-height: 100vh;
+    background-image: url(./WillyWonka.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 500px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.seccion {
+    /* padding-left: 100%; */
+    float: right;
+    width: 95%;
+    height: 90%;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 1%;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/*Estilos de la tabla*/
+.tabla h1{
+    padding-left: 100%;
+}
+
+.tabla {
+    border-width: 3px;
+    background-color: #ffffffe8;
+}
+
+.button1 {
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    padding: 3px;
+    font-size: 15px;
+}
+
+.button2 {
+    background-color: #fe8c00;
+    border-radius: 5px;
+    color: white;
+    padding: 3px;
+    font-size: 15px;
+}
+.button3 {
+    background-color: #1900fe;
+    border-radius: 5px;
+    color: white;
+    padding: 3px;
+    font-size: 20px;
+}
+
+.tabla .botonadd{
+    padding-left:70%;
+}
+
+.salida{
+    align-items: center;
+}
+
+.salida:hover {
+    background-color: #fe8c00;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+
+tr,
+td {
+    padding: 3px;
+}
+
+.b1 {border-style:outset;}
+
+@media screen and (max-width:500px) {
+    form {
+        width: 80%;
+    }
+}
+/****************formulario NUevo Usuario ***********************************/
+.overlay{
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay.active{
+    visibility: visible;
+}
+
+
+.popup_user{
+    background: white;
+    box-shadow: 0px 0px 80px -31px #fe8c00;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+    display: inline-block;
+
+}
+.popup_user form .contenedor-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.popup_user h1{
+    color: rgba(88, 48, 2);
+    padding: 0px 0px 25px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup_user .btn_cerrar_popup {
+    font-size: 20px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    transition: .2s ease all;
+}
+
+.popup_user .btn_cerrar_popup:hover {
+    color: red;
+}
+
+.popup_user form .contenedor-inputs input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 30px;
+    line-height: 52px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 2px solid #ffffff;
+    border: none;
+    border-bottom: 1px solid #fe8c00;
+    outline: none;
+    
+}
+.popup_user form .contenedor-inputs .grupo{
+    padding: 5px;
+}
+
+.popup_user form .botonesform{  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.popup_user form .guardar_popup {
+    background: blue;
+    color: white;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+.popup_user form .cerrar_popup {
+    background: rgb(255, 0, 0);
+    color: white;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+/**************** Formulario de Editar Usuario  **********************/
+.overlay2{
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay2.active{
+    visibility: visible;
+}
+
+.popup_user2{
+    background: white;
+    box-shadow: 0px 0px 80px -31px #fe8c00;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+    display: inline-block;
+
+}
+.popup_user2 form .contenedor-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.popup_user2 h1{
+    color: rgba(88, 48, 2);
+    padding: 0px 0px 25px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup_user2 .btn_cerrar_popup {
+    font-size: 20px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    transition: .2s ease all;
+}
+
+.popup_user2 .btn_cerrar_popup:hover {
+    color: red;
+}
+
+.popup_user2 form .contenedor-inputs input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 30px;
+    line-height: 52px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 2px solid #ffffff;
+    border: none;
+    border-bottom: 1px solid #fe8c00;
+    outline: none;
+    
+}
+.popup_user2 form .contenedor-inputs .grupo{
+    padding: 5px;
+}
+
+.popup_user2 form .botonesform{  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.popup_user2 form .guardar_popup {
+    background: blue;
+    color: white;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+.popup_user2 form .cerrar_popup {
+    background: rgb(255, 0, 0);
+    color: white;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+.grupo{
+    position: relative;
+    /* margin: 45px ; */
+}
+
+input:focus{ 
+    outline: none;
+    color: rgba(88, 48, 2);
+}
+
+label{
+    color: #fe8c00;
+    font-size: 18px;
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    transition: 0.4s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 18px;
+    color: #757575;
+}
+
+/* ---------------------formulario producto ---------------------*/
+
+.overlayprod{
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlayprod.active{
+    visibility: visible;
+}
+
+.popup_prod{
+    background: white;
+    box-shadow: 0px 0px 80px -31px #fe8c00;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+    display: inline-block;
+
+}
+.popup_prod form .contenedor-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.popup_prod h1{
+    color: rgba(88, 48, 2);
+    padding: 0px 0px 25px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup_prod .btn_cerrar_popup_prod {
+    font-size: 20px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    transition: .2s ease all;
+}
+
+.popup_prod .btn_cerrar_popup_prod:hover {
+    color: red;
+}
+
+.popup_prod form .contenedor-inputs input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 30px;
+    line-height: 52px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 2px solid #ffffff;
+    border: none;
+    border-bottom: 1px solid #fe8c00;
+    outline: none;
+    
+}
+.popup_prod form .contenedor-inputs .grupo{
+    padding: 5px;
+}
+
+.popup_prod form .botonesform{  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.popup_prod form .guardar_popup {
+    background: blue;
+    color: white;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+.popup_prod form .cerrar_popup {
+    background: rgb(255, 0, 0);
+    color: white;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+/**********for,mulario editar producto**************/
+
+.overlayprod2{
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlayprod2.active{
+    visibility: visible;
+}
+
+.popup_prod2{
+    background: white;
+    box-shadow: 0px 0px 80px -31px #fe8c00;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+    display: inline-block;
+
+}
+.popup_prod2 form .contenedor-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.popup_prod2 h1{
+    color: rgba(88, 48, 2);
+    padding: 0px 0px 25px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup_prod2 .btn_cerrar_popup_prod {
+    font-size: 20px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    transition: .2s ease all;
+}
+
+.popup_prod2 .btn_cerrar_popup_prod:hover {
+    color: red;
+}
+
+.popup_prod2 form .contenedor-inputs input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 30px;
+    line-height: 52px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 2px solid #ffffff;
+    border: none;
+    border-bottom: 1px solid #fe8c00;
+    outline: none;
+    
+}
+.popup_prod2 form .contenedor-inputs .grupo{
+    padding: 5px;
+}
+
+.popup_prod2 form .botonesform{  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.popup_prod2 form .guardar_popup {
+    background: blue;
+    color: white;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+.popup_prod2 form .cerrar_popup {
+    background: rgb(255, 0, 0);
+    color: white;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+
+/**********************************************/
+.grupo{
+    position: relative;
+    /* margin: 45px ; */
+}
+
+.button4 {
+    background-color: #1900fe;
+    border-radius: 5px;
+    color: white;
+    padding: 3px;
+    font-size: 20px;
+}
+
+input:focus{ 
+    outline: none;
+    color: rgba(88, 48, 2);
+}
+
+label{
+    color: #fe8c00;
+    font-size: 18px;
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    transition: 0.4s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 18px;
+    color: #757575;
+}
